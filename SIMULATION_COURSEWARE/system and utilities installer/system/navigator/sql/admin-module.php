@@ -1,0 +1,137 @@
+<html>
+	<head>
+				<script type="text/javascript" src="jquery.js"></script>
+		<title>Users</title>
+		<style>
+			body{
+				background-image:url("../images/design/main-bg.png");
+			}
+			#navigator{
+
+				width:40%;
+				height:6%;
+				position:absolute;
+				top:5%;
+				left:30%;
+				background-color:white;
+				border-radius:3px 3px 3px;
+				text-align:center;
+				font-family: verdana,helvetica,arial,sans-serif;
+			}
+			.selected{
+				
+			}
+			#navigator>ul>li{
+				list-style:none;
+				display:inline;
+				padding-right:25px;
+				color:gray;
+			}
+			#navigator>ul>li>a{
+				color:gray;
+				text-decoration:none;
+
+			}
+			
+			#navigator>ul>li>a:hover{
+				color:464646;
+			}
+
+			#new{
+				border-left:1px solid gray;
+				
+			}
+			#new>a{
+				padding-left:25px;
+				
+			}
+			#main-container{
+	
+				width: 65%;
+				height:80%;
+				position: relative;
+				top:10%;
+				left:14%;
+				border-radius:3px 0px 0px 3px;
+				text-align:center;
+				padding-left:7%;
+				padding-top:2%;
+
+			}
+
+			#hide-container{
+				background-image:url("../images/design/trans-bg.png");
+				position:absolute;
+				top:0%;
+				left:0%;
+				width:99.7%;
+				height:99.7%;
+			}
+		</style>
+		<script>
+			$(document).ready(function(){
+
+			$('#hide-container').hide();
+			  $('#new').click(function(){
+			    $('#hide-container').show();
+			  });
+			  $('#close').click(function(){
+				$('#hide-container').hide();
+				});
+			});
+
+			//ajax
+
+			function showContent()
+			{
+
+			if (window.XMLHttpRequest)
+			  {// code for IE7+, Firefox, Chrome, Opera, Safari
+			  xmlhttp=new XMLHttpRequest();
+			  }
+			else
+			  {// code for IE6, IE5
+			  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+			  }
+			xmlhttp.onreadystatechange=function()
+			  {
+			  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{
+				document.getElementById("hide-container").innerHTML=xmlhttp.responseText;
+				}
+			  }
+			xmlhttp.open("GET","sql/add-user.php",true);
+			xmlhttp.send();
+			}
+		
+		</script>
+	</head>
+	<body>
+		<div id="navigator">
+			<ul>
+				<li><a href="admin-index.php" id="user" class="selected">User</a></li>
+				<li><a href="admin-module.php" id="module">Module</a></li>
+				<li><a href="">Quiz</a></li>
+				<li id="new"><a href="#" id="new" onClick="showContent()">New</a></li>
+			</ul>
+		</div>
+		<div id="main-container">
+					<?php
+					
+						include("../includes/connection.php");
+						$res=mysql_query("SELECT * FROM module");
+
+							while($row = mysql_fetch_array($res))
+							{
+								echo "<p><b>Topic:</b>".$row['topic']."</p><p><b>Description:</b> ".$row['description']."</p><p><b>content: </b>".$row['content']."</p><p><b>Lesson:</b> ".$row['lesson']."</p><br /> <a href=\"sql/edit-module.php?id={$row['id']}\" id = \"icon-edit\" name = \"edit\" value = \"edit\"><img src=\"../images/icon/edit-icon.png\" /></a>".
+									"<a href=\"sql/delete-module.php?id={$row['id']} \" id = \"icon-delete\" ><img src=\"../images/icon/delete-icon.png\" ' onclick='return confirm(\"Are you sure to delete this record?\");' /></a><hr />";
+
+							}//while
+					
+					
+					?>
+		</div>
+		<div id="hide-container"></div>
+	
+	</body>
+</html>

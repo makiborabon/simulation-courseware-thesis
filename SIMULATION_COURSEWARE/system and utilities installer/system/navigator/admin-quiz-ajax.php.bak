@@ -1,0 +1,20 @@
+					<?php
+
+						$id=$_GET["q"];
+
+						include("../includes/connection.php");
+						$res=mysql_query("SELECT * FROM quiz WHERE id=$id");
+
+
+							while($row = mysql_fetch_array($res))
+							{
+							echo	"<div id=\"quiz-action\">"
+										."<a href=\"sql/delete-quiz.php?id=".$row['id']."\"><div id=\"quiz-action-delete\"></div></a>"
+										."<a href=\"sql/edit-quiz.php?id=".$row['id']."\"><div id=\"quiz-action-edit\"></div>"
+									."</div></a>";
+								echo "Question: ".$row['question']."<br />Choice 1: ".$row['choice1']."<br />Choice 2: ".$row['choice2']."<br />Choice 3: ".$row['choice3']."<br />Correct answer: ".$row['answer'];
+
+							}//while
+
+
+					?>

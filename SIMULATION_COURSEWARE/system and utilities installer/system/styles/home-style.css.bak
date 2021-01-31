@@ -1,0 +1,95 @@
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: 00aff0;
+			}
+			#main{
+
+				width: 99.8%;
+				min-height: 99.6%;
+
+			}
+			#cloud{
+				background-image:url("../images/design/cloud-2.png");
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+				width: 99.8%;
+				height: 20%;
+				position: absolute;
+				top:80%;
+				left: 0%;
+			}
+			#header{
+				border-bottom: 1px solid dddada;
+				width: 99.%;
+				min-height: 20%;
+				background-image:url("../images/design/banner.png");
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+
+			}
+
+			#left-navi{
+			
+				width: 19.8%;
+				min-height: 78.5%;
+				
+				position: absolute;
+				top:20.2%;
+				left:0%;
+
+			}
+			#middle-content{
+				border-left: 1px solid dddada;
+				border-right: 1px solid dddada;
+				width: 60.5%;
+				min-height: 78%;
+
+				position: relative;
+				top: 20%;
+				left:20%;
+
+			}
+			#right{
+		
+				width: 19%;
+				min-height: 78.5%;
+
+				position: absolute;
+				top: 20.2%;
+				left:80.7%;
+
+
+			}
+			#middle-content > #table-data{
+				border: 1px solid gray;
+				width: 85%;
+
+				margin-top: 10%;
+
+				position: relative;
+				left: 3%;
+			}
+			#icon-edit{
+				position:relative;
+
+				left: 15%;
+
+			}
+			#icon-edit:hover{
+				position:relative;
+				left: 15%;
+				border-top:1px solid red;
+			}
+
+
+			#icon-delete{
+				position:relative;
+				left: 25%;
+
+			}
+			#icon-delete:hover{
+				position:relative;
+				left: 25%;
+				border-top:1px solid red;
+			}

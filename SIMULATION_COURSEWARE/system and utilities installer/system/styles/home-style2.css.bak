@@ -1,0 +1,148 @@
+			body{
+				margin: 0px;
+				padding: 0px;
+				background-color: 00aff0;
+			}
+			#main{
+				border: 1px solid red;
+				width: 99.8%;
+				min-height: 99.6%;
+			}
+			#cloud{
+				background-image:url("../images/design/cloud-2.png");
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+				width: 99.8%;
+				height: 20%;
+				position: fixed;
+				top:80%;
+				left: 0%;
+			}
+			#header{
+				border-bottom: 1px solid dddada;
+				width: 99.%;
+				min-height: 20%;
+				background-image:url("../images/design/banner.png");
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+
+			}
+
+			#left-navi{
+			
+				width: 19.8%;
+				min-height: 78.5%;
+				
+				position: absolute;
+				top:20.2%;
+				left:0%;
+
+			}
+			#left-navi > ul > li{
+				list-style: none;
+				text-decoration: none;
+				font-size: 14pt;
+				font-family: BrowalliaUPC;
+				
+			}
+			#left-navi > ul > li > a{
+				text-decoration: none;
+				color: white;
+			}
+			#left-navi > ul > li > a:hover{
+			
+				color: dddada;
+			}
+			#selected{
+				font-size: 18pt;
+				font-style:italic;
+
+			}
+			#middle-content{
+				border-left: 1px solid dddada;
+				border-right: 1px solid dddada;
+				width: 60.5%;
+				min-height: 78%;
+
+				position: relative;
+				top: 20%;
+				left:20%;
+
+			}
+			#right{
+		
+				width: 19%;
+				min-height: 78.5%;
+
+				position: absolute;
+				top: 20.2%;
+				left:80.7%;
+
+
+			}
+			#search > #table-data{
+
+				width: 85%;
+				position: relative;
+				top: 5%;
+				left: 7%;
+				font-family: BrowalliaUPC;
+				color: white;
+
+			}
+			#icon-edit{
+				position:relative;
+
+				left: 1%;
+
+			}
+			#icon-edit:hover{
+				position:relative;
+				left: 1%;
+				border-top:1px solid red;
+			}
+
+
+			#icon-delete{
+				position:relative;
+				left: 15%;
+
+			}
+			#icon-delete:hover{
+				position:relative;
+				left: 15%;
+				border-top:1px solid red;
+			}
+			#search{
+
+					position: relative;
+					width: 90%;
+					height: 50%;
+					top: 10%;
+					left: 5%;
+					overflow: scroll;
+					font-family: BrowalliaUPC;
+					color: white;
+			}
+			#add{
+					margin-bottom:15px;
+					width:50px;
+					height:50px;
+					position: relative;
+					left:92%;
+					top:5px;
+					background-image:url("../images/icon/add.png");
+				}
+			#add > a{
+				text-decoration:none;
+			}
+			#add:hover{
+				margin-bottom:15px;
+
+				width:50px;
+				height:50px;
+				position: relative;
+				left:92%;
+				top:5px;
+				background-image:url("../images/icon/add-hover.png");
+			}

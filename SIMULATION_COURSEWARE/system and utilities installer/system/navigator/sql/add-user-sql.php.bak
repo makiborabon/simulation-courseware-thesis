@@ -1,0 +1,18 @@
+<?php
+
+			$uname = strtolower($_POST['uname']);
+			$password = strtolower()$_POST['password']);
+			$fname = strtolower($_POST['fname']);
+			$mname = strtolower($_POST['mname']);
+			$lname = strtolower($_POST['lname']);
+			$specs = strtolower($_POST['specs']);
+
+		include("../../includes/connection.php");
+		mysql_query("INSERT INTO user(uname, password, fname, mname, lname, specs)
+	VALUES ('$uname', '$password', '$fname', '$mname', '$lname', '$specs')") or die(mysql_error());
+
+	header("Location:../admin-index.php");
+
+
+
+?>

@@ -1,0 +1,133 @@
+			body{
+				padding: 0px;
+				margin: 0px;font-family: BrowalliaUPC;
+			}
+			#main-body{
+				height: 99.8%;
+				width: 99.8%;
+				background-image:url("../images/design/lgbg.jpg");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+
+			}
+			#navigator{
+
+				height: 5%;
+				width: 50%;
+				position: relative;
+				top: 20%;
+				left: 25%;
+				padding: 0px;
+			}
+			#navigator > ul > li{
+				color: e6e7e9;
+				list-style: none;
+				text-decoration: none;
+				display: inline;
+				font-size: 20pt;
+			}
+			#navigator > ul > li >a{
+				color: black;
+				list-style: none;
+				text-decoration: none;
+				background-color: e6e7e9;
+				padding: 7px;
+				border-radius: 5px 5px;
+
+			}
+
+			#navigator > ul > li >#selected{
+				background-color: 00a4da;
+				color: e6e7e9;
+			}
+			#navigator > ul > li > a:hover{
+				color: red;
+			}
+			#log-in-main{
+
+				height: 60%;
+				width: 50%;
+				background-color: 00a4da;
+				border-radius: 8px 8px;
+				position: relative;
+				top: 20%;
+				left: 25%;
+			}
+			#content-form{
+
+				width: 90%;
+				height:90%;
+				background-color: #FFFFFF;
+				border-radius: 8px 8px;
+				position: relative;
+				top: 4.5%;
+				left:4.5%;
+			}
+			form{
+
+				width: 99%;
+				height:99%;
+			}
+			#username{
+				font-family: BrowalliaUPC;
+				width: 80%;
+				height: 15%;
+				position: relative;
+				top: 20%;
+				left: 10%;
+				background-image:url("../images/design/log-in-bg.png");
+				border-radius: 6px 6px;
+				padding-left: 10px;
+				font-size: 18pt;
+			
+			}
+			#password{
+			font-family: BrowalliaUPC;
+				width: 80%;
+				height: 15%;
+				position: relative;
+				top: 25%;
+				left: 10%;
+				background-image:url("../images/design/log-in-bg.png");
+				border-radius: 6px 6px;
+				padding-left: 10px;
+				font-size: 18pt;
+			
+			}
+			#submit{
+			font-family: BrowalliaUPC;
+				width: 30%;
+				height: 10%;
+				position: relative;
+				top: 35%;
+				left: 75%;
+				
+				border-radius: 6px 6px;
+				padding-left: 10px;
+				font-size: 18pt;
+				color: gray;
+				
+			} 
+			#submit-sup{
+				width: 30%;
+				height: 10%;
+				position:relative;
+					left: 75%;
+font-family: BrowalliaUPC;
+				background-image:url("../images/design/sign-up.png");
+				border-radius: 6px 6px;
+				padding-left: 10px;
+				font-size: 18pt;
+				color: e6e7e9;
+			} 
+			#submit:hover{
+				color: black;
+			}
+			.field{
+				background-image:url("../images/design/log-in-form-background.png");
+				border-radius: 6px 6px;
+				padding-left: 10px;
+				font-size: 18pt;
+				color: e6e7e9;
+				margin-left: 20px;font-family: BrowalliaUPC;
+			}
